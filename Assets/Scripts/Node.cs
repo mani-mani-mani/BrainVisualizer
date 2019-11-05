@@ -25,10 +25,12 @@ public class Node : MonoBehaviour
     public void Increment()
     {
         value++;
+        Display();
     }
 
     public void Decrement()
     {
         value--;
+        Display();
     }
 }
