@@ -75,9 +75,17 @@ public class NodeManager : MonoBehaviour
 
     /// <summary>
     /// "," に相当する
-    /// 1 バイト読み込む
+    /// 現在のメモリーに 1 バイト読み込む
     /// </summary>
     void Input()
+    {
+    }
+
+    /// <summary>
+    /// "." に相当する
+    /// 現在のメモリーに格納されてる値を出力する
+    /// </summary>
+    void Output()
     {
     }
 }
