@@ -42,7 +42,8 @@ public class NodeManager : MonoBehaviour
     /// </summary>
     void Increment()
     {
-        nodeList[index].Decrement();
+        Assert.IsTrue(0 <= index && index < maxIndex);
+        nodeList[index].Increment();
     }
 
     /// <summary>
@@ -50,6 +51,7 @@ public class NodeManager : MonoBehaviour
     /// </summary>
     void Decrement()
     {
+        Assert.IsTrue(0 <= index && index < maxIndex);
         nodeList[index].Decrement();
     }
 
@@ -59,7 +61,7 @@ public class NodeManager : MonoBehaviour
     /// </summary>
     void Next()
     {
-        Assert.IsTrue(index < maxIndex);
+        Assert.IsTrue(0 <= index && index < maxIndex);
         index++;
     }
 
@@ -69,7 +71,7 @@ public class NodeManager : MonoBehaviour
     /// </summary>
     void Prev()
     {
-        Assert.IsTrue(index > 0);
+        Assert.IsTrue(0 <= index && index < maxIndex);
         index--;
     }
 
