@@ -5,17 +5,30 @@ using UnityEngine.UI;
 
 public class Node : MonoBehaviour
 {
-    int value;
+    char value;
     Text text;
+
     // Start is called before the first frame update
     void Start()
     {
-        value = 0;
+        // 初期値は 0 にする
+        this.value = (char)0;
+
+        this.text = this.GetComponent<Text>();
+        this.Display();
+    }
+    public void Display()
+    {
+        this.text.text = value.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Increment()
     {
-        
+        value++;
+    }
+
+    public void Decrement()
+    {
+        value--;
     }
 }
