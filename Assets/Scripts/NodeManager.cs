@@ -40,7 +40,7 @@ public class NodeManager : MonoBehaviour
     /// <summary>
     /// "+" に相当する
     /// </summary>
-    void Increment()
+    public void Increment()
     {
         Assert.IsTrue(0 <= index && index < maxIndex);
         nodeList[index].Increment();
@@ -49,7 +49,7 @@ public class NodeManager : MonoBehaviour
     /// <summary>
     /// "-" に相当する
     /// </summary>
-    void Decrement()
+    public void Decrement()
     {
         Assert.IsTrue(0 <= index && index < maxIndex);
         nodeList[index].Decrement();
@@ -59,7 +59,7 @@ public class NodeManager : MonoBehaviour
     /// ">" に相当する
     /// ポインターを一つ進める
     /// </summary>
-    void Next()
+    public void Next()
     {
         Assert.IsTrue(0 <= index && index < maxIndex);
         index++;
@@ -69,7 +69,7 @@ public class NodeManager : MonoBehaviour
     /// "<" に相当する
     /// ポインターを一つ戻す
     /// </summary>
-    void Prev()
+    public void Prev()
     {
         Assert.IsTrue(0 <= index && index < maxIndex);
         index--;
@@ -79,15 +79,17 @@ public class NodeManager : MonoBehaviour
     /// "," に相当する
     /// 現在のメモリーに 1 バイト読み込む
     /// </summary>
-    void Input()
+    public void Input()
     {
+        // @todo
     }
 
     /// <summary>
     /// "." に相当する
     /// 現在のメモリーに格納されてる値を出力する
     /// </summary>
-    void Output()
+    public void Output()
     {
+        // @todo
     }
 }
