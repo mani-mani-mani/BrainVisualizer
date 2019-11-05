@@ -7,6 +7,7 @@ public class Node : MonoBehaviour
 {
     char value;
     Text text;
+
     // Start is called before the first frame update
     void Start()
     {
