@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.UI;
 
 public class NodeManager : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class NodeManager : MonoBehaviour
 
     // ポインターノードを表示するパネル
     public GameObject nodePanel;
+
+    // 入出力用のテキストコンポーネント
+    public InputField inputField;
+    public InputField outputField;
 
     // 現在のポインタの位置
     public int index;
@@ -81,7 +86,12 @@ public class NodeManager : MonoBehaviour
     /// </summary>
     public void Input()
     {
-        // @todo
+        // 入力を受け取る
+        char inputValue = inputField.text.First();
+        nodeList[index].Input(inputValue);
+
+        // 読み込んだ文字を削除する
+        inputField.text = inputField.text.Remove(0, 1);
     }
 
     /// <summary>
@@ -90,6 +100,10 @@ public class NodeManager : MonoBehaviour
     /// </summary>
     public void Output()
     {
-        // @todo
+        // 出力を受け取る
+        string outputValue = nodeList[index].s_value;
+
+        // 結果を出力に追記していく
+        outputField.text += outputValue;
     }
 }
