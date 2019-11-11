@@ -6,6 +6,11 @@ using UnityEngine.UI;
 public class Node : MonoBehaviour
 {
     char value;
+    public string s_value
+    {
+        get { return value.ToString(); }
+    }
+
     Text text;
 
     // Start is called before the first frame update
@@ -19,7 +24,7 @@ public class Node : MonoBehaviour
     }
     public void Display()
     {
-        this.text.text = value.ToString();
+        this.text.text = s_value;
     }
 
     public void Increment()
@@ -31,6 +36,12 @@ public class Node : MonoBehaviour
     public void Decrement()
     {
         value--;
+        Display();
+    }
+
+    public void Input(char inputValue)
+    {
+        this.value = inputValue;
         Display();
     }
 }
