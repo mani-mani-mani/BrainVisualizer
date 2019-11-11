@@ -33,7 +33,7 @@ public class NodeManager : MonoBehaviour
 
             node.transform.localPosition = new Vector3(i * nodeSize, 0.0f, 0.0f);
 
-            nodeList.Add(node.GetComponent<Node>());
+            nodeList.Add(node.GetComponentInChildren<Node>());
         }
     }
 
